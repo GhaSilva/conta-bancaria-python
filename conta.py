@@ -8,3 +8,15 @@ class Conta:
         self.titular = titular
         self.saldo = saldo
         self.limite = limite
+
+    def extrato(self):
+        print("Saldo: R$ {} do titular {}" .format(self.saldo, self.titular))
+
+    def deposita(self, valor):
+        self.saldo += valor
+
+    def saca(self, valor):
+        if(self.saldo >= valor):
+            self.saldo -= valor
+        else:
+            print("Saldo insuficiente")
